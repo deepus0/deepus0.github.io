@@ -1,0 +1,20 @@
+:root {
+    --background-color: #b2b2b2;
+    --primary: #bc5a45;
+    --secondary: #f18973;
+    --accent: #f4e1d2;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    background: var(--background-color);
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+a {
+    font-size: 1.4rem;
+}

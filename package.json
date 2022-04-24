@@ -1,0 +1,10 @@
+{
+  "name": "deepus0-github-io",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "http-server -a localhost -o"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  }
+}
