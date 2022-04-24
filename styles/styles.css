@@ -1,20 +1,23 @@
-:root {
-    --background-color: #b2b2b2;
-    --primary: #bc5a45;
-    --secondary: #f18973;
-    --accent: #f4e1d2;
+* {
+    margin: 0;
 }
-
 body {
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
+    color: white;
     background: var(--background-color);
+}
+
+.wrapper {
+    font-size: 1.4rem;
 }
 
 h1 {
     font-size: 3.2rem;
 }
 
-a {
-    font-size: 1.4rem;
+#navigation {
+    height: 3em;
+    background-color: var(--accent);
 }

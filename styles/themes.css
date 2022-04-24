@@ -1,0 +1,37 @@
+:root {
+    --background-color: #363636;
+    --primary: #efefef;
+    --secondary: #a8a8a8;
+    --accent: #2a2a2a;
+}
+
+.primary {
+    background-color: var(--primary);
+    color: var(--accent);
+}
+
+.secondary {
+    background-color: var(--secondary);
+    color: var(--accent);
+}
+
+.primary-to-background {
+    padding: 6em 0;
+    color: var(--accent);
+    background: linear-gradient(180deg, var(--primary) 5%, var(--secondary) 100%);
+}
+
+.primary-to-secondary {
+    padding: 6em 0;
+    background: linear-gradient(180deg, var(--secondary) 5%, var(--background-color) 100%);
+}
+
+.secondary-to-accent {
+    padding: 6em 0;
+    background: linear-gradient(180deg, var(--secondary) 5%, var(--accent) 100%);
+}
+
+.accent {
+    background-color: var(--accent);
+}
+
