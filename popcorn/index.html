@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Popcorn</title>
-
-    <script src="popcorn.js"></script>
     <link rel="stylesheet" href="popcorn.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-        <h1>Popcorn vs Teeth</h1>
+<div class="container">
+    <div class="quiz-container">
+        <h1 class="title">Tooth or Popcorn</h1>
 
-        <div class="result-container">
-            <div class="score">Score: <span id="total-score">0</span></div>
+        <p class="bg-primary">
+            The aim of the quiz is to determine which is a delectable savoury treat, and which is a hypocalcified tooth. Answer all 20 questions correctly to get a result!
+        </p>
+
+        <div class="question-container">
+            <div class="image-container">
+                <img class="quiz-image" id="quiz-image" src="" alt="pic"/>
+            </div>
+            <span id="random-figure">Figure 1.A</span>
         </div>
 
-        <div class="images-container">
-            <div class="selection-container">
-                <div class="image-container">
-                    <img src="assets/tooth1.png" alt="pic"/>
-                </div>
-                <span>Option A</span>
+        <div class="answer-container">
+            <button class="btn btn-default btn-answer" onclick="answerSelect('tooth')">Tooth</button>
+            <button class="btn btn-default btn-answer" onclick="answerSelect('popcorn')">Popcorn</button>
+            <br/>
+            <div class="result-container">
+                <span id="result-text"></span>
             </div>
-
-            <div class="selection-container">
-                <div class="image-container">
-                    <img src="assets/popcorn1.png" alt="pic"/>
-                </div>
-                <span>Option B</span>
-            </div>
-        </div>
-
-        <div class="result-container">
-            Answer: <span id="result-text">...</span>
         </div>
     </div>
+</div>
 </body>
 </html>
+<script src="popcorn.js"></script>
