@@ -65,17 +65,17 @@ function finishQuiz() {
 
     let result = '';
     if (score <= 3) {
-        result = 'Quite a bad result';
+        result = 'Quite a bad result.';
     } else if (score <= 7) {
-        result = 'Somewhat a bad result';
+        result = 'Somewhat a bad result.';
     } else if (score <= 12) {
-        result = 'Wouldn\'t want to consider you to check my teeth';
+        result = 'Wouldn\'t want to consider you to check my teeth.';
     } else if (score <= 15) {
-        result = 'A satisfactory result';
+        result = 'A satisfactory result.';
     } else if (score <= 18) {
-        result = 'You could be a food technician';
+        result = 'Hope you don\'t get scared when you see people smile';
     } else if (score <= 19) {
-        result = 'Not good enough for a dentist';
+        result = 'Not good enough for a dentist.';
     } else if (score === 20) {
         result = 'You could be a dentist!';
     }
