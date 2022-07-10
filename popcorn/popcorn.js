@@ -1,4 +1,5 @@
 let quizConfig = [];
+let results = [];
 let score = 0;
 let currentImage = 0;
 
@@ -17,7 +18,7 @@ function setup() {
 
 function generateQuizConfig(keyword, iterations, config) {
     for (let i = 1; i <= iterations; i++) {
-        config.push({answer: keyword, image: `assets/${keyword}${i}.png`, originalImage: `assets/${keyword}${i}.png`})
+        config.push({answer: keyword, image: `assets/${keyword}${i}.png`, originalImage: `assets/original${keyword}${i}.png`})
     }
 }
 
@@ -40,7 +41,9 @@ function shuffleArray(array) {
 }
 
 function answerSelect(answer) {
-    if (answer === quizConfig[currentImage].answer) {
+    const isCorrect = answer === quizConfig[currentImage].answer;
+    results.push(isCorrect)
+    if (isCorrect) {
         score++;
     }
     nextQuestion();
@@ -80,4 +83,19 @@ function finishQuiz() {
         result = 'You could be a dentist!';
     }
     document.getElementById('result-text').innerText = 'Result: ' + result + ' Score: ' + score + '/20';
+    let bodyHtml = '';
+    for (let i = 0; i < quizConfig.length; i++) {
+        let rowHtml = '';
+        rowHtml += `<tr class="${!!results[i] ? 'correct-row' : 'incorrect-row'}">`
+        rowHtml += `<td>${i + 1}<td/>`;
+        rowHtml += `<td>${!!results[i] ? 'Correct' : 'Incorrect'}<td/>`;
+        rowHtml += `<td><img class="result-image" src="${quizConfig[i].image}" alt="answer"><td/>`;
+        rowHtml += `<td><img class="result-original-image" src="${quizConfig[i].originalImage}" alt="answer"><td/>`;
+        rowHtml += '</tr>'
+        bodyHtml += rowHtml;
+    }
+    const resultsBody = document.getElementById('results-table-body');
+    resultsBody.innerHTML = bodyHtml;
+
+    document.getElementById('results-table').style.display = 'block';
 }

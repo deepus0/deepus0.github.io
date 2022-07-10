@@ -1,15 +1,6 @@
-:root {
-    --primary: #ff6d00;
-    --secondary: #3c096c;
-}
-
 * {
     margin: 0;
     font-family: Arial, serif;
-}
-
-body {
-    background-color: #5b5b5b;
 }
 
 .container {
@@ -52,4 +43,39 @@ p {
 
 .image-container:hover img {
     transform: scale(1.1);
+}
+
+.result-container {
+    padding: 1em 0;
+}
+
+#results-table {
+    display: none;
+}
+
+.result-image {
+    height: 250px;
+    width: 250px;
+}
+
+.result-original-image {
+    height: 300px;
+    width: 300px;
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+    transition: -webkit-filter 0.5s ease;
+    transition: filter 0.5s ease;
+}
+
+.result-original-image:hover {
+    -webkit-filter: initial;
+    filter: initial;
+}
+
+.correct-row {
+    /*background-color: #e9ffe9;*/
+}
+
+.incorrect-row {
+    background-color: #ffeeee;
 }
